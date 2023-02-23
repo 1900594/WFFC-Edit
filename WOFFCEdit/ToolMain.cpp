@@ -336,18 +336,46 @@ void ToolMain::UpdateInput(MSG * msg)
 	{
 		m_toolInputCommands.right = true;
 	}
-	else m_toolInputCommands.right = false;
-	//rotation
+	else m_toolInputCommands.right = false;	
+
 	if (m_keyArray['E'])
+	{
+		m_toolInputCommands.up = true;
+	}
+	else m_toolInputCommands.up = false;
+
+	if (m_keyArray['Q'])
+	{
+		m_toolInputCommands.down = true;
+	}
+	else m_toolInputCommands.down = false;
+
+	//rotation
+	if (m_keyArray[39])
 	{
 		m_toolInputCommands.rotRight = true;
 	}
 	else m_toolInputCommands.rotRight = false;
-	if (m_keyArray['Q'])
+	if (m_keyArray[37])
 	{
 		m_toolInputCommands.rotLeft = true;
 	}
 	else m_toolInputCommands.rotLeft = false;
 
 	//WASD
+	
+
+	//ARROW KEYS
+	if (m_keyArray[38])
+	{
+		m_toolInputCommands.rotUp = true;
+	}
+	else m_toolInputCommands.rotUp = false;	
+
+	if (m_keyArray[40])
+	{
+		m_toolInputCommands.rotDown = true;
+	}
+	else m_toolInputCommands.rotDown = false;
+
 }
