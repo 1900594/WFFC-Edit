@@ -103,6 +103,17 @@ private:
     std::unique_ptr<DirectX::SpriteBatch>                                   m_sprites;
     std::unique_ptr<DirectX::SpriteFont>                                    m_font;
 
+
+	DirectX::SimpleMath::Matrix m_world;
+	DirectX::SimpleMath::Matrix m_view;
+	DirectX::SimpleMath::Matrix m_proj;
+
+	//lab 4
+	//std::unique_ptr<DirectX::CommonStates> m_states;
+	//std::unique_ptr<DirectX::IEffectFactory> m_fxFactory;
+	//std::unique_ptr<DirectX::Model> m_model;
+
+
 #ifdef DXTK_AUDIO
     std::unique_ptr<DirectX::AudioEngine>                                   m_audEngine;
     std::unique_ptr<DirectX::WaveBank>                                      m_waveBank;
