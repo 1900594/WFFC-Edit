@@ -368,6 +368,17 @@ void XM_CALLCONV Game::DrawGrid(FXMVECTOR xAxis, FXMVECTOR yAxis, FXMVECTOR orig
 
     m_deviceResources->PIXEndEvent();
 }
+void Game::MultiSelect(int ID)
+{
+	if (m_InputCommands.multi == true)
+	{
+		if (std::find(multipleSelection.begin(), multipleSelection.end(), ID) != multipleSelection.end()){}
+		else {
+			multipleSelection.push_back(ID);
+		}
+	}
+
+}
 #pragma endregion
 
 #pragma region Message Handlers
@@ -547,8 +558,15 @@ int Game::MousePicking()
 				{
 					closerDistance = pickedDistance;
 					selectedID = i;
+
+					if (m_InputCommands.multi = true)
+					{
+						multipleSelection.push_back(selectedID);
+					}
 				}
 			}
+
+		
 		}
 	}
 

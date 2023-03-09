@@ -115,6 +115,9 @@ private:
 
 	//week 6
 	RECT m_ScreenDimensions;
+	std::vector<int>multipleSelection;
+
+	void MultiSelect(int ID );
 
 #ifdef DXTK_AUDIO
     std::unique_ptr<DirectX::AudioEngine>                                   m_audEngine;
