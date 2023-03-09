@@ -51,6 +51,8 @@ public:
 	void SaveDisplayChunk(ChunkObject *SceneChunk);	//saves geometry et al
 	void ClearDisplayList();
 
+	int MousePicking(); ///week 6 
+
 #ifdef DXTK_AUDIO
 	void NewAudioDevice();
 #endif
@@ -104,15 +106,15 @@ private:
     std::unique_ptr<DirectX::SpriteFont>                                    m_font;
 
 
-	DirectX::SimpleMath::Matrix m_world;
-	DirectX::SimpleMath::Matrix m_view;
-	DirectX::SimpleMath::Matrix m_proj;
 
 	//lab 4
 	//std::unique_ptr<DirectX::CommonStates> m_states;
 	//std::unique_ptr<DirectX::IEffectFactory> m_fxFactory;
 	//std::unique_ptr<DirectX::Model> m_model;
 
+
+	//week 6
+	RECT m_ScreenDimensions;
 
 #ifdef DXTK_AUDIO
     std::unique_ptr<DirectX::AudioEngine>                                   m_audEngine;
