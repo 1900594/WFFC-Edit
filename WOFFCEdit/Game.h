@@ -10,6 +10,7 @@
 #include "DisplayObject.h"
 #include "DisplayChunk.h"
 #include "ChunkObject.h"
+#include"Camera.h"
 #include "InputCommands.h"
 #include <vector>
 
@@ -141,6 +142,8 @@ private:
     DirectX::SimpleMath::Matrix                                             m_world;
     DirectX::SimpleMath::Matrix                                             m_view;
     DirectX::SimpleMath::Matrix                                             m_projection;
+
+	Camera m_camera;
 
 
 };
