@@ -8,12 +8,12 @@ void Camera::Update(const InputCommands& inputCommands)
 
 	if (inputCommands.rotRight)
 	{
-		m_cameraOrientation -= m_rotationRate;
+		m_cameraOrientation.y -= m_rotationRate;
 	}
 
 	if (inputCommands.rotLeft)
 	{
-		m_cameraOrientation += m_rotationRate;
+		m_cameraOrientation.y += m_rotationRate;
 	}
 	if (inputCommands.rotUp)
 	{
@@ -24,8 +24,8 @@ void Camera::Update(const InputCommands& inputCommands)
 		m_cameraOrientation.x -= m_rotationRate;
 	}
 
-	m_cameraOrientation.y += inputCommands.mouse_X;
-	m_cameraOrientation.x += inputCommands.mouse_Y;
+	m_cameraOrientation.y += inputCommands.mouseDX;
+	m_cameraOrientation.x += inputCommands.mouseDY;
 
 	m_cameraOrientation.x = std::min(m_cameraOrientation.x, +89.f);
 	m_cameraOrientation.x = std::max(m_cameraOrientation.x, -89.f);

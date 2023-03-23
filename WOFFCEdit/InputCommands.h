@@ -20,5 +20,8 @@ struct InputCommands
 	int mouse_Y;
 	bool mouse_LB_Down;
 
+	long mouseDX;
+	long mouseDY;
+
 	bool multi;
 };

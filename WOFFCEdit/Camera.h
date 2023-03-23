@@ -34,8 +34,8 @@ private:
 	Vector3 m_lookAt;
 	Vector3 m_vectorRight;
 
-	float m_movementSpeed = 0.2f;
-	float m_rotationRate = 2.f;
+	float m_movementSpeed = 0.5f;
+	float m_rotationRate = 4.f;
 
 
 };
